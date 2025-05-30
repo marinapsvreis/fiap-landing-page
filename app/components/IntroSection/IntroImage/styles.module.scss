@@ -1,0 +1,15 @@
+.imageContainer {
+  width: 100%;
+  max-width: 1495px;
+  margin: 0 auto;
+  will-change: clip-path;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}

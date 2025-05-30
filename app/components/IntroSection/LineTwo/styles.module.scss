@@ -1,18 +1,31 @@
-.lineTwo {
+.lineTwoContainer {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.lineTwoTrack {
+  display: flex;
+  width: max-content;
+  flex-direction: row-reverse;
+}
+
+.lineTwoText {
   font-family: "Gotham HTF", Arial, sans-serif;
   font-weight: 400;
   font-size: 5.1875rem;
   letter-spacing: 0;
   text-transform: uppercase;
   color: #fff;
-  text-wrap: nowrap;
-  width: 100vw;
-  overflow-x: hidden;
+  white-space: nowrap;
+  margin-right: 4rem;
 }
 
 .lineTwoBottomLine {
-  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 2px;
-  width: 100vw;
-  margin-top: 1rem;
+  background: #fff;
 }
