@@ -1,11 +1,16 @@
 .navbar {
+  background-color: transparent;
   width: 100%;
-  background-color: var(--header-background);
   height: 5rem;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+
+  &.scrolled {
+    background-color: var(--header-background);
+  }
 
   .container {
     max-width: 1200px;
@@ -17,5 +22,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .progressBar {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 4px;
+    background: var(--primary);
+    width: 0%;
+    transform-origin: left;
   }
 }
