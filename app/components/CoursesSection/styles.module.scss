@@ -1,0 +1,77 @@
+.courses {
+  width: 100%;
+  height: 100vh;
+
+  padding: 13.25rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6.5rem;
+
+  .coursesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .coursesTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.2rem;
+
+    .coursesTitleText {
+      font-size: 5.75rem;
+      font-weight: 400;
+      color: #fff;
+      margin-left: -0.5rem;
+    }
+
+    .coursesTitleSubtext {
+      font-size: 1.375rem;
+      font-weight: 300;
+      color: var(--primary);
+    }
+  }
+
+  .categoriesList {
+    display: flex;
+    gap: 6.125rem;
+
+    .category {
+      font-size: 1.375rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+  }
+
+  .categoryTitle {
+    font-size: 3.4375rem;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .coursesList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    margin-left: 0.25rem;
+    width: 50%;
+
+    .course {
+      font-size: 1.375rem;
+      font-weight: 300;
+      color: var(--text);
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--text);
+
+      .courseMode {
+        font-size: 0.8125rem;
+        font-weight: 300;
+        color: var(--text);
+        margin-left: 1rem;
+      }
+    }
+  }
+}
