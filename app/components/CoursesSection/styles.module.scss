@@ -44,7 +44,7 @@
       border: none;
       box-shadow: none;
       color: #888;
-      font-size: 1.375rem;
+      font-size: 1.0625rem;
       font-weight: 400;
       cursor: pointer;
       position: relative;
@@ -55,13 +55,14 @@
       &:hover,
       &:focus {
         color: #fff;
+        font-weight: 600;
       }
 
       &::before {
         content: "";
         display: block;
         position: absolute;
-        top: -1.2rem;
+        top: -0.8rem;
         left: 0;
         width: 0;
         height: 5px;
@@ -83,7 +84,7 @@
 
   .categoryTitle {
     font-size: 3.4375rem;
-    font-weight: 400;
+    font-weight: 500;
     color: #fff;
   }
 
@@ -101,6 +102,15 @@
       color: var(--text);
       padding-bottom: 1rem;
       border-bottom: 1px solid var(--text);
+
+      &:hover {
+        color: var(--primary);
+        border-bottom: 1px solid var(--primary);
+
+        .courseMode {
+          color: var(--primary);
+        }
+      }
 
       .courseMode {
         font-size: 0.8125rem;
