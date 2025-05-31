@@ -8,6 +8,8 @@
   display: flex;
   width: max-content;
   flex-direction: row-reverse;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #fff;
 }
 
 .lineOneText {
@@ -19,15 +21,6 @@
   color: #fff;
   white-space: nowrap;
   margin-right: 4rem;
-}
-
-.lineOneBottomLine {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #fff;
 }
 
 .lineTwoTrack {

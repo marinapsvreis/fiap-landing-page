@@ -33,7 +33,6 @@ export default function LineTwo() {
         <span className={styles.lineTwoText}>TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.</span>
         <span className={styles.lineTwoText}>TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.</span>
       </div>
-      <div className={styles.lineTwoBottomLine}></div>
     </div>
   )
 }

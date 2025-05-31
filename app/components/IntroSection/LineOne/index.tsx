@@ -29,7 +29,6 @@ export default function LineOne() {
       <div className={styles.lineOneTrack} ref={lineRef}>
         <span className={styles.lineOneText}>CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.</span>
         <span className={styles.lineOneText}>CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.</span>
-        <div className={styles.lineOneBottomLine}></div>
       </div>
     </div>
   )
