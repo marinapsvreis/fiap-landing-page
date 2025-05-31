@@ -4,13 +4,16 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from "./styles.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const numbers = ["01", "02", "03", "04", "05", "06"];
+
 export default function WaterSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [number, setNumber] = useState(numbers[0]);
 
   useGSAP(() => {
     if (!sectionRef.current) return;
@@ -28,8 +31,12 @@ export default function WaterSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 80%",
-          end: "bottom -3%",
-          scrub: 1
+          end: "bottom 50%",
+          scrub: 1,
+          onUpdate: self => {
+            const idx = Math.round(self.progress * (numbers.length - 1));
+            setNumber(numbers[idx]);
+          }
         }
       }
     );
@@ -58,7 +65,7 @@ export default function WaterSection() {
               //WEB HACKING
             </p>
             <div className={styles.waterCoursesCounter}>
-              <p className={styles.waterLineTextNumber}>06</p>
+              <p className={styles.waterLineTextNumber}>{number}</p>
               <p className={styles.waterLineText}>CURSOS</p>
             </div>
           </div>
