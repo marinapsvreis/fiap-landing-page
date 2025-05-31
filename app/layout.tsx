@@ -19,9 +19,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <SmoothScroll>
-          <main className="flex-1">
-            {children}
-          </main>
+          {children}
         </SmoothScroll>
       </body>
     </html>

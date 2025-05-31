@@ -1,12 +1,14 @@
 .courses {
   width: 100%;
   max-width: 2000px;
-  height: 100vh;
+  min-height: 100vh;
 
-  padding: 24rem 13.25rem;
+  padding: 13.25rem;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: space-between ;
   gap: 6.5rem;
 
   .coursesHeader {

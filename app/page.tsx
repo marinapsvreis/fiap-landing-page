@@ -7,12 +7,14 @@ import styles from "./page.module.scss";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <>
       <HeaderSection />
-      <IntroSection />      
-      <WaterSection />
-      <CoursesSection />
-      <FaqSection />
-    </div>
+      <main className={styles.page}>
+        <IntroSection />
+        <WaterSection />
+        <CoursesSection />
+        <FaqSection />
+      </main>
+    </>
   );
 }
