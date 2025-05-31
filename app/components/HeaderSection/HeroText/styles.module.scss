@@ -34,3 +34,17 @@
   z-index: -1;
   margin-top: 6rem;
 }
+
+.heroTextHidden {
+  opacity: 0;
+  transform: translateY(100px); // para o primeiro span
+}
+
+.heroTextHiddenSecond {
+  opacity: 0;
+  transform: translateY(-50px); // para o segundo span
+}
+
+.bgtextHidden {
+  opacity: 0;
+}

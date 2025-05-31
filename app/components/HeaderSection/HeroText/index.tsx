@@ -2,15 +2,18 @@
 
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import styles from './styles.module.scss'
 
 export default function HeroText() {
   const firstLineRef = useRef<HTMLSpanElement>(null)
   const secondLineRef = useRef<HTMLSpanElement>(null)
   const bgTextRef = useRef<HTMLSpanElement>(null)
+  const [hidden, setHidden] = useState(true)
 
   useGSAP(() => {
+    setHidden(false)
+
     const tl = gsap.timeline()
 
     tl.fromTo(
@@ -56,10 +59,25 @@ export default function HeroText() {
 
   return (
     <h1 className={styles.title}>
-      <span className={styles.bgtext} ref={bgTextRef}>SOBRE</span>
-      <span ref={firstLineRef}>A Melhor Faculdade</span>
+      <span
+        className={`${styles.bgtext} ${hidden ? styles.bgtextHidden : ""}`}
+        ref={bgTextRef}
+      >
+        SOBRE
+      </span>
+      <span
+        ref={firstLineRef}
+        className={hidden ? styles.heroTextHidden : ""}
+      >
+        A Melhor Faculdade
+      </span>
       <br />
-      <span className={styles.titleSecondLine} ref={secondLineRef}>de Tecnologia</span>
+      <span
+        className={`${styles.titleSecondLine} ${hidden ? styles.heroTextHiddenSecond : ""}`}
+        ref={secondLineRef}
+      >
+        de Tecnologia
+      </span>
     </h1>
   )
 }
