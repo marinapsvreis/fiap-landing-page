@@ -1,37 +1,30 @@
 "use client"
 
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from './styles.module.scss'
-
-gsap.registerPlugin(ScrollTrigger)
 
 function Navbar() {
   const progressRef = useRef<HTMLDivElement>(null)
   const [hasScrolled, setHasScrolled] = useState(false)
 
-  useGSAP(() => {
-    if (!progressRef.current) return
+  function handleScroll() {
+    const scrollTop = window.scrollY
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
 
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: "body",
-      start: "top top",
-      end: "bottom bottom",
-      onUpdate: (self) => {
-        if (progressRef.current) {
-          progressRef.current.style.width = `${self.progress * 100}%`
-          setHasScrolled(self.progress > 0)
-        }
-      }
-    })
+    if (progressRef.current)
+      progressRef.current.style.width = `${progress}%`
 
-    return () => {
-      scrollTrigger.kill()
-    }
-  }, { scope: progressRef })
+    setHasScrolled(progress > 0)
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    handleScroll() // inicializa corretamente
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <header className={`${styles.navbar} ${hasScrolled ? styles.scrolled : ''}`}>
