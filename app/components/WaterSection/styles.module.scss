@@ -8,3 +8,13 @@
     object-fit: cover;
   }
 }
+
+@media (max-width: 480px) {
+  .waterScrollSection {
+    display: none;
+  }
+
+  .waterFrame {
+    display: none;
+  }
+}

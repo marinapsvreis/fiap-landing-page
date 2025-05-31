@@ -36,3 +36,10 @@
     transform-origin: left;
   }
 }
+
+@media (max-width: 480px) {
+  .logoImage {
+    width: 5.25rem;
+    height: 1.4375rem;
+  }
+}

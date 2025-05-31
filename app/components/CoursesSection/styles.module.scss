@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between ;
+  align-items: space-between;
   gap: 6.5rem;
 
   .coursesHeader {
@@ -122,6 +122,41 @@
         margin-left: 1rem;
         transition: color 0.3s ease;
       }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .courses {
+    padding-inline: 2rem;
+
+    .coursesHeader {
+      height: 100%;
+    }
+
+    .coursesTitle {
+      height: 100%;
+      gap: 2.2806rem;
+
+      .coursesTitleText {
+        font-size: 3.875rem;
+      }
+
+      .coursesTitleSubtext {
+        font-size: 1.375rem;
+      }
+    }
+
+    .categoriesList {
+      display: none;
+    }
+
+    .categoryTitle {
+      display: none;
+    }
+
+    .coursesList {
+      display: none;
     }
   }
 }

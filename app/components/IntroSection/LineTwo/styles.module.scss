@@ -21,3 +21,13 @@
   color: #fff;
   white-space: nowrap;
 }
+
+@media (max-width: 480px) {
+  .lineTwoTrack {
+    padding-bottom: 0.5rem;
+  }
+
+  .lineTwoText {
+    font-size: 2.1875rem;
+  }
+}

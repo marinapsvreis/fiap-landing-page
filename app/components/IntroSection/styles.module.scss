@@ -15,3 +15,9 @@
     margin-top: -12rem;
   }
 }
+
+@media (max-width: 480px) {
+  .intro {
+    gap: 0.3rem
+  }
+}

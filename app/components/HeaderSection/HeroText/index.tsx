@@ -66,6 +66,18 @@ export default function HeroText() {
         SOBRE
       </span>
       <span
+        className={`${styles.bgtextMobile1} ${hidden ? styles.bgtextHidden : ""}`}
+        ref={bgTextRef}
+      >
+        SOB
+      </span>
+      <span
+        className={`${styles.bgtextMobile2} ${hidden ? styles.bgtextHidden : ""}`}
+        ref={bgTextRef}
+      >
+        RE
+      </span>
+      <span
         ref={firstLineRef}
         className={hidden ? styles.heroTextHidden : ""}
       >

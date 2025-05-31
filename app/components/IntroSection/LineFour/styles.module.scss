@@ -18,3 +18,9 @@
   text-wrap: nowrap;
   font-style: italic;
 }
+
+@media (max-width: 480px) {
+  .lineFour {
+    display: none;
+  }
+}

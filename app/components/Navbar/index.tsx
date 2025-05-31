@@ -37,6 +37,7 @@ function Navbar() {
               width={144}
               height={39}
               priority
+              className={styles.logoImage}
             />
           </a>
         </nav>

@@ -8,3 +8,9 @@
   line-height: 0.8;
   letter-spacing: 0.0005em;
 }
+
+@media (max-width: 480px) {
+  .lineThree {
+    display: none;
+  }
+}
