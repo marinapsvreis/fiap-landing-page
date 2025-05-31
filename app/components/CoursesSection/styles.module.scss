@@ -124,19 +124,112 @@
       }
     }
   }
+
+  .coursesListMobile {
+    display: none;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .coursesMobile {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .categoryBlock {
+      border-bottom: 1px solid #333;
+      padding-bottom: 1.5rem;
+    }
+
+    .categoryHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .categoryTitleMobile {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .toggleButton {
+      width: 3.7319rem;
+      height: 3.7319rem;
+      border-radius: 50%;
+      border: 1px solid var(--primary);
+      background: transparent;
+      color: transparent;
+      font-size: 2.5rem;
+      font-weight: medium;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      outline: none;
+      box-shadow: none;
+      padding: 0;
+      -webkit-text-stroke: 1px var(--primary);
+    }
+
+    .toggleButton:active {
+      background: var(--primary);
+      color: #000;
+      border-color: var(--primary);
+    }
+
+    .toggleButton[aria-expanded="true"] {
+      background: var(--primary);
+      color: #000;
+      border-color: var(--primary);
+      font-weight: 900;
+      font-size: 30px;
+    }
+
+    .coursesListMobile {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .courseMobile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      color: #fff;
+      border-top: 1px solid #444;
+      padding-top: 1.0769rem;
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+
+    .courseModeMobile {
+      font-size: 0.625rem;
+      color: #8a959b;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
 }
 
 @media (max-width: 480px) {
   .courses {
     padding-inline: 2rem;
+    gap: 3.4838rem;
 
     .coursesHeader {
       height: 100%;
+      flex-direction: column;
+      gap: 2.2806rem;
     }
 
     .coursesTitle {
+      width: 100%;
       height: 100%;
-      gap: 2.2806rem;
+      gap: 2.3438rem;
 
       .coursesTitleText {
         font-size: 3.875rem;
@@ -157,6 +250,10 @@
 
     .coursesList {
       display: none;
+    }
+
+    .coursesListMobile {
+      display: flex;
     }
   }
 }

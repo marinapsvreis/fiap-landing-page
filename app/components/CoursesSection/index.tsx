@@ -11,6 +11,7 @@ export default function CoursesSection() {
   const [isTransitioning, setIsTransitioning] = useState(false)
   const coursesRef = useRef<HTMLUListElement>(null)
   const titleRef = useRef<HTMLParagraphElement>(null)
+  const [openCategory, setOpenCategory] = useState<string | null>(categories[0]?.key ?? null)
 
   function handleCategoryChange(key: string) {
     if (key === selected || isTransitioning) return
@@ -55,6 +56,11 @@ export default function CoursesSection() {
   const category = categories.find(cat => cat.key === selected)
   if (!category) return null
 
+  function handleToggle(key: string) {
+    if (openCategory === key) setOpenCategory(null)
+    else setOpenCategory(key)
+  }
+
   return (
     <section className={styles.courses}>
       <div className={styles.coursesHeader}>
@@ -91,6 +97,37 @@ export default function CoursesSection() {
           </li>
         ))}
       </ul>
+      <div className={styles.coursesListMobile}>
+        {categories.map(category => (
+          <div key={category.key} className={styles.categoryBlock}>
+            <div className={styles.categoryHeader}>
+              <h2 className={styles.categoryTitleMobile}>{category.title}</h2>
+              <button
+                className={styles.toggleButton}
+                aria-expanded={openCategory === category.key}
+                aria-controls={`courses-list-${category.key}`}
+                onClick={() => handleToggle(category.key)}
+                type="button"
+              >
+                {openCategory === category.key ? "−" : "+"}
+              </button>
+            </div>
+            {openCategory === category.key && (
+              <ul
+                id={`courses-list-${category.key}`}
+                className={styles.coursesListMobile}
+              >
+                {category.courses.map(course => (
+                  <li key={course.name} className={styles.courseMobile}>
+                    <span className={styles.courseModeMobile}>{course.mode}</span>
+                    <span>{course.name}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
     </section>
   )
 }
