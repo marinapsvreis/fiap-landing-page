@@ -129,6 +129,7 @@
     display: none;
     flex-direction: column;
     gap: 1.25rem;
+    width: 100%;
 
     .coursesMobile {
       display: flex;
@@ -217,8 +218,12 @@
 
 @media (max-width: 480px) {
   .courses {
-    padding-inline: 2rem;
+    padding: 2rem;
     gap: 3.4838rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
 
     .coursesHeader {
       height: 100%;

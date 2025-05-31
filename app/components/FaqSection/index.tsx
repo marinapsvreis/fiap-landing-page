@@ -32,6 +32,9 @@ export default function FaqSection() {
           </button>
         ))}
       </div>
+      <div className={styles.faqMobile}>
+        
+      </div>
     </section>
   )
 }
