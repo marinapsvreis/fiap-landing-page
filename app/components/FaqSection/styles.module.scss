@@ -3,10 +3,13 @@
   max-width: 2000px;
   height: 100vh;
 
-  padding: 10rem 13.25rem;
+  padding: 4rem 13.25rem;
+  
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: start;
   gap: 6.5rem;
 
   .faqHeader {
