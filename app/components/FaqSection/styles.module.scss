@@ -74,13 +74,11 @@
 
       .faqAnswer {
         opacity: 0;
-        max-height: 0;
-        overflow: hidden;
         font-size: 1.125rem;
         font-weight: 400;
         text-align: left;
         color: #8a959b;
-        transition: opacity 1s, max-height 0.3s;
+        transition: opacity 0.3s;
         margin-top: 0.5rem;
         width: 100%;
       }
@@ -97,7 +95,6 @@
       }
       .faqAnswer {
         opacity: 1;
-        max-height: 200px;
         color: #8a959b;
       }
     }
