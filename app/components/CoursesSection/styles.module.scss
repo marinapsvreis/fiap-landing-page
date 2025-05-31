@@ -1,5 +1,6 @@
 .courses {
   width: 100%;
+  max-width: 2000px;
   height: 100vh;
 
   padding: 13.25rem;
@@ -39,9 +40,44 @@
     gap: 6.125rem;
 
     .category {
+      background: none;
+      border: none;
+      box-shadow: none;
+      color: #888;
       font-size: 1.375rem;
       font-weight: 400;
-      color: var(--text);
+      cursor: pointer;
+      position: relative;
+      padding: 0;
+      transition: color 0.2s;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -1.2rem;
+        left: 0;
+        width: 0;
+        height: 5px;
+        background: var(--primary);
+        border-radius: 1px;
+        transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+    }
+
+    .selected {
+      color: #fff;
+      font-weight: 600;
+
+      &::before {
+        width: 40%;
+      }
     }
   }
 

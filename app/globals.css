@@ -5,11 +5,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #F80D5A;
+    --primary: #f80d5a;
     --background: #000000;
     --foreground: #ededed;
-    --text: #8A959B;
-    --shadow-text: #0B0C0D;
+    --text: #8a959b;
+    --shadow-text: #0b0c0d;
     --header-background: #202121;
   }
 }
@@ -55,7 +55,7 @@ a {
 
 @font-face {
   font-family: "Gotham HTF";
-    src: url("/fonts/gotham/gotham-htf-black.woff2") format("woff2"),
+  src: url("/fonts/gotham/gotham-htf-black.woff2") format("woff2"),
     url("/fonts/gotham/gotham-htf-black.woff") format("woff");
   font-weight: 800;
   font-style: normal;
