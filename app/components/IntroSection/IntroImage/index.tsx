@@ -41,7 +41,7 @@ export default function IntroImage() {
         alt="Intro Image"
         width={1495}
         height={804}
-        priority
+        loading="lazy"
         className={styles.image}
       />
     </div>
