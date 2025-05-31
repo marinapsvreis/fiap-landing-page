@@ -35,8 +35,6 @@ export default function CoursesSection() {
         ease: "power2.in"
       })
   }
-
-  // Sempre que selected muda, faz o fade-in dos dois juntos e libera a transição
   useGSAP(() => {
     if (coursesRef.current && titleRef.current) {
       gsap.set([coursesRef.current, titleRef.current], {
