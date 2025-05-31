@@ -29,8 +29,8 @@ export default function LineThree() {
   return (
     <div className={styles.lineThreeContainer}>
       <div className={styles.lineThreeTrack} ref={lineRef}>
-        <span className={styles.lineThree}>SKILLS. CONHECIMENTO. SKILLS. CONHECIMENTO.</span>
-        <span className={styles.lineThree}>SKILLS. CONHECIMENTO. SKILLS. CONHECIMENTO.</span>
+        <span className={styles.lineThree}>CONHECIMENTO • SKILLS • CONHECIMENTO • SKILLS • </span>
+        <span className={styles.lineThree}>CONHECIMENTO • SKILLS • CONHECIMENTO • SKILLS • </span>
         <div className={styles.lineThreeBottomLine}></div>
       </div>
     </div>
