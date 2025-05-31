@@ -1,89 +1,89 @@
-.water {
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
+// .water {
+//   width: 100%;
+//   height: 100vh;
+//   background-color: #000;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   gap: 1rem;
 
-  position: relative;
+//   position: relative;
 
-  padding-inline: 6rem;
+//   padding-inline: 6rem;
 
-  .waterDate {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text);
-    position: absolute;
-    top: 12rem;
-    left: 2rem;
-    transform: rotate(-90deg);
-  }
+//   .waterDate {
+//     font-size: 1rem;
+//     font-weight: 500;
+//     color: var(--text);
+//     position: absolute;
+//     top: 12rem;
+//     left: 2rem;
+//     transform: rotate(-90deg);
+//   }
 
-  .waterLines {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
+//   .waterLines {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 6rem;
 
-    .waterLine {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
+//     .waterLine {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 0.8rem;
+//     }
 
-    .waterLineTexts {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: repeat(3, auto);
-      align-items: end;
-      width: 100%;
+//     .waterLineTexts {
+//       display: grid;
+//       grid-template-columns: 1fr 1fr 1fr;
+//       grid-template-rows: repeat(3, auto);
+//       align-items: end;
+//       width: 100%;
 
-      .waterCoursesCounter {
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-        text-align: end;
+//       .waterCoursesCounter {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 0.8rem;
+//         text-align: end;
 
-        .waterLineTextNumber {
-          font-size: 7rem;
-          font-weight: 500;
-          color: transparent;
-          -webkit-text-stroke: 2px #6b6b6b;
-          line-height: 5rem;
-          margin-top: -4rem;
-        }
-      }
-    }
+//         .waterLineTextNumber {
+//           font-size: 7rem;
+//           font-weight: 500;
+//           color: transparent;
+//           -webkit-text-stroke: 2px #6b6b6b;
+//           line-height: 5rem;
+//           margin-top: -4rem;
+//         }
+//       }
+//     }
 
-    .waterLineText {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--text);
-    }
+//     .waterLineText {
+//       font-size: 1rem;
+//       font-weight: 500;
+//       color: var(--text);
+//     }
 
-    .waterBall {
-      font-size: 4rem;
-      font-weight: 400;
-      color: #fff;
-      line-height: 1rem;
-    }
+//     .waterBall {
+//       font-size: 4rem;
+//       font-weight: 400;
+//       color: #fff;
+//       line-height: 1rem;
+//     }
 
-    .waterLineBorder {
-      width: 100%;
-      height: 1px;
-      background-color: var(--text);
-    }
+//     .waterLineBorder {
+//       width: 100%;
+//       height: 1px;
+//       background-color: var(--text);
+//     }
 
-    .waterLineBottom {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      padding-right: 12rem;
-    }
-  }
-}
+//     .waterLineBottom {
+//       width: 100%;
+//       position: absolute;
+//       bottom: 0;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 0.8rem;
+//       padding-right: 12rem;
+//     }
+//   }
+// }
