@@ -7,3 +7,10 @@
   width: 100%;
   min-height: 100vh;
 }
+
+@media (max-width: 480px) {
+  .header {
+    gap: 0.3rem;
+    min-height: 28.75rem;
+  }
+}
