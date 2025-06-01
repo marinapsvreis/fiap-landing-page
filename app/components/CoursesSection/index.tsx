@@ -112,7 +112,10 @@ export default function CoursesSection() {
                 onClick={() => handleToggle(category.key)}
                 type="button"
               >
-                {openCategory === category.key ? "−" : "+"}
+                <span className={styles.icon}>
+                  <span className={styles.plus}>+</span>
+                  <span className={styles.minus}>−</span>
+                </span>
               </button>
             </div>
             <ul
