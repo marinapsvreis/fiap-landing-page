@@ -57,8 +57,11 @@ export default function CoursesSection() {
   if (!category) return null
 
   function handleToggle(key: string) {
-    if (openCategory === key) setOpenCategory(null)
-    else setOpenCategory(key)
+    if (openCategory === key) {
+      setOpenCategory(null)
+    } else {
+      setOpenCategory(key)
+    }
   }
 
   return (
@@ -112,19 +115,22 @@ export default function CoursesSection() {
                 {openCategory === category.key ? "−" : "+"}
               </button>
             </div>
-            {openCategory === category.key && (
-              <ul
-                id={`courses-list-${category.key}`}
-                className={styles.coursesListMobile}
-              >
-                {category.courses.map(course => (
-                  <li key={course.name} className={styles.courseMobile}>
-                    <span className={styles.courseModeMobile}>{course.mode}</span>
-                    <span>{course.name}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
+            <ul
+              id={`courses-list-${category.key}`}
+              className={styles.coursesListMobile}
+              aria-expanded={openCategory === category.key}
+            >
+              {category.courses.map(course => (
+                <li
+                  key={course.name}
+                  className={styles.courseMobile}
+                  aria-expanded={openCategory === category.key}
+                >
+                  <span className={styles.courseModeMobile}>{course.mode}</span>
+                  <span>{course.name}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
