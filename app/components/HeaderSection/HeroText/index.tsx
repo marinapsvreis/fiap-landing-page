@@ -9,6 +9,8 @@ export default function HeroText() {
   const firstLineRef = useRef<HTMLSpanElement>(null)
   const secondLineRef = useRef<HTMLSpanElement>(null)
   const bgTextRef = useRef<HTMLSpanElement>(null)
+  const bgTextMobile1Ref = useRef<HTMLSpanElement>(null)
+  const bgTextMobile2Ref = useRef<HTMLSpanElement>(null)
   const [hidden, setHidden] = useState(true)
 
   useGSAP(() => {
@@ -44,7 +46,7 @@ export default function HeroText() {
         "-=0.4"
       )
       .fromTo(
-        bgTextRef.current,
+        [bgTextRef.current, bgTextMobile1Ref.current, bgTextMobile2Ref.current],
         {
           opacity: 0
         },
@@ -67,13 +69,13 @@ export default function HeroText() {
       </span>
       <span
         className={`${styles.bgtextMobile1} ${hidden ? styles.bgtextHidden : ""}`}
-        ref={bgTextRef}
+        ref={bgTextMobile1Ref}
       >
         SOB
       </span>
       <span
         className={`${styles.bgtextMobile2} ${hidden ? styles.bgtextHidden : ""}`}
-        ref={bgTextRef}
+        ref={bgTextMobile2Ref}
       >
         RE
       </span>
