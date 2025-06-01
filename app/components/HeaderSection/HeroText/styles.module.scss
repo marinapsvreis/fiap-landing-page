@@ -84,6 +84,26 @@
   opacity: 0;
 }
 
+@media (max-width: 359px) {
+  .bgtextMobile1 {
+    top: -90px;
+    right: -116px;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--shadow-text);
+    pointer-events: none;
+  }
+
+  .bgtextMobile2 {
+    top: 12px;
+    right: -72px;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+}
+
 @media (max-width: 1280px) {
   .title {
     font-size:  64px;
