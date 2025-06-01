@@ -23,7 +23,8 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Gotham HTF", Arial, Helvetica, sans-serif;
+  font-family: "Gotham HTF", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -62,20 +63,20 @@ a {
 }
 
 @media (max-width: 359px) {
-  html { 
-    font-size: 14px; 
+  html {
+    font-size: 14px;
   }
 }
 
 @media (min-width: 2560px) {
-  html { 
-    font-size: 24px; 
+  html {
+    font-size: 24px;
   }
 }
 
 @media (min-width: 3840px) {
-  html { 
-    font-size: 32px; 
+  html {
+    font-size: 32px;
   }
 }
 
@@ -87,10 +88,11 @@ a {
 
 @font-face {
   font-family: "Gotham HTF";
-  src: url("/fonts/gotham/gotham-htf-ultra.woff2") format("woff2"),
-    url("/fonts/gotham/gotham-htf-ultra.woff") format("woff");
+  src: url("/fonts/gotham/gotham-htf-ultra.woff") format("woff"),
+    url("/fonts/gotham/gotham-htf-ultra.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
