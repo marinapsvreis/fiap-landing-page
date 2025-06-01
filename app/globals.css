@@ -61,6 +61,18 @@ a {
   width: 100%;
 }
 
+@media (min-width: 2560px) {
+  html { 
+    font-size: 24px; 
+  }
+}
+
+@media (min-width: 3840px) {
+  html { 
+    font-size: 32px; 
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
