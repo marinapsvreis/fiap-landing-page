@@ -23,7 +23,14 @@
   margin-right: 4rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1280px) {
+  .lineOneText {
+    font-size: 48px;
+    margin-right: 36px;
+  }
+}
+
+@media (max-width: 736px) {
   .lineOneTrack {
     padding-bottom: 0.5rem;
   }

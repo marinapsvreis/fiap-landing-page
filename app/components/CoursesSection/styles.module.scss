@@ -216,7 +216,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1280px) {
   .courses {
     padding: 2rem;
     gap: 3.4838rem;
@@ -224,6 +224,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
+    min-height: fit-content;
 
     .coursesHeader {
       height: 100%;

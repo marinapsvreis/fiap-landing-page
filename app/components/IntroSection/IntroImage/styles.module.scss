@@ -15,9 +15,15 @@
   max-width: 100%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 736px) {
   .image {
     display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .imageContainer {
+    max-width: 16%;
   }
 }
 

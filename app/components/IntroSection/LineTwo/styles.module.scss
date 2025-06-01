@@ -22,7 +22,14 @@
   white-space: nowrap;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1280px) {
+  .lineTwoText {
+    font-size: 48px;
+    margin-right: 36px;
+  }
+}
+
+@media (max-width: 736px) {
   .lineTwoTrack {
     padding-bottom: 0.5rem;
   }
