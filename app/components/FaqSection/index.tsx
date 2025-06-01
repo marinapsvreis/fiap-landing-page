@@ -1,11 +1,17 @@
 "use client"
 
 import { useState } from "react"
-import styles from "./styles.module.scss"
 import { faqs } from "./faqs"
+import styles from "./styles.module.scss"
 
 export default function FaqSection() {
   const [hovered, setHovered] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  function handleToggle(index: number) {
+    if (openIndex === index) setOpenIndex(null)
+    else setOpenIndex(index)
+  }
 
   return (
     <section className={styles.faq}>
@@ -33,7 +39,29 @@ export default function FaqSection() {
         ))}
       </div>
       <div className={styles.faqMobile}>
-        
+        {faqs.map((faq, idx) => (
+          <div
+            key={faq.question}
+            className={`${styles.faqItem} ${openIndex === idx ? styles.open : ""}`}
+          >
+            <button
+              className={styles.faqQuestion}
+              onClick={() => handleToggle(idx)}
+              aria-expanded={openIndex === idx}
+              aria-controls={`faq-answer-${idx}`}
+              type="button"
+            >
+              {faq.question}
+            </button>
+            <div
+              id={`faq-answer-${idx}`}
+              className={styles.faqAnswer}
+              style={{ display: openIndex === idx ? "block" : "none" }}
+            >
+              {faq.answer}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )
