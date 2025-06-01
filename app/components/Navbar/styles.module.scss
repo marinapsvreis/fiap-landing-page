@@ -42,9 +42,22 @@
   }
 }
 
+@media (max-width: 360px) {
+  .navbar {
+    height: 4rem;
+
+    .logoImage {
+      width: 2.625rem;
+      height: 0.75rem;
+    }
+  }
+}
+
 @media (max-width: 736px) {
-  .logoImage {
-    width: 5.25rem;
-    height: 1.4375rem;
+  .navbar {
+    .logoImage {
+      width: 5.25rem;
+      height: 1.4375rem;
+    }
   }
 }
