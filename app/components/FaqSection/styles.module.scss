@@ -149,7 +149,21 @@
         color: #fff;
       }
 
+      .faqAnswer {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        font-size: 1.125rem;
+        font-weight: 400;
+        text-align: left;
+        color: #8a959b;
+        margin-top: 0.5rem;
+        width: 100%;
+      }
+
       &.open .faqAnswer {
+        max-height: 500px;
         opacity: 1;
         color: #949b99;
       }

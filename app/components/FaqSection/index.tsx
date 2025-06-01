@@ -56,7 +56,8 @@ export default function FaqSection() {
             <div
               id={`faq-answer-${idx}`}
               className={styles.faqAnswer}
-              style={{ display: openIndex === idx ? "block" : "none" }}
+              aria-hidden={openIndex !== idx}
+              // style={{ display: openIndex === idx ? "block" : "none" }}
             >
               {faq.answer}
             </div>
