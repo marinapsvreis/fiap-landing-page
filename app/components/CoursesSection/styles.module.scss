@@ -169,33 +169,35 @@
 
       .icon {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
       }
 
-      .plus, .minus {
+      .plus,
+      .minus {
         position: absolute;
-        transform: scale(1);        
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         transition: opacity 0.3s ease, transform 0.3s ease;
       }
-      
+
       .plus {
-        top: .4375rem;
-        left: 1.0625rem;
         opacity: 1;
         -webkit-text-stroke: 1px var(--primary);
       }
-      
-      .minus {        
-        top: .4375rem;
-        left: 1.1563rem;         
+
+      .minus {
         opacity: 0;
       }
 
       @media (max-width: 320px) {
         .minus {
-          top: .3125rem;
-          left: 1.0625rem;
+          top: 50%;
+          left: 50%;
         }
       }
     }
@@ -216,7 +218,7 @@
       .plus {
         opacity: 0;
       }
-  
+
       .minus {
         opacity: 1;
         color: #000;
